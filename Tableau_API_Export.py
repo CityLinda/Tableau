@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 Created on Mar 23, 2019
 
@@ -10,6 +11,7 @@ a sample configuration file is attached
 @author: Linda Li
 '''
 
+
 import argparse
 import getpass
 import logging
@@ -20,7 +22,7 @@ from configparser import ConfigParser
 import sys
 import os
 
-#helper function
+
 
 def export_csv(server, resource_id, fi_path, fi_name):
     
@@ -112,7 +114,7 @@ if __name__=="__main__":
     
 	transformer=Transformer_Column()
  
-	new_columns=transformer.get_csv_column(sys.argv[1],sys.argv[2]) #   
+	new_columns=transformer.get_csv_column(sys.argv[1],sys.argv[2])
     
 	tableau_exporter_to_csv=Tableau_Exporter(sys.argv[3],sys.argv[4],sys.argv[5])
     
